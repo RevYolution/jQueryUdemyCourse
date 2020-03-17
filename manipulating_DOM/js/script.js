@@ -4,18 +4,26 @@
 
 $(function() {
   // append() adds in the parameter element to each of the selector elements that it is being added to as the last child. Can also be done with appendTo() but the element that is being added now goes first. 
-  $("ul ul:first").append("<li> Added with append()</li>");
-  $("<li>Added with appendTo()</li>").appendTo("ul ul:first");
+
+  // $("ul ul:first").append("<li> Added with append()</li>");
+  // $("<li>Added with appendTo()</li>").appendTo("ul ul:first");
 
   // prepend() will add an element in front of the given selector.
-  $("ul ul:first").prepend("<li>Added with prepend()</li>");
-  $("<li>Added with prependTo()</li>").prependTo("ul ul:first");
+
+  // $("ul ul:first").prepend("<li>Added with prepend()</li>");
+  // $("<li>Added with prependTo()</li>").prependTo("ul ul:first");
 
   // To create siblings of an element use either before()/after(). 
-  $(".red-box").after("<div class = 'red-box'>Added with after()</div>");
-  $(".red-box").before("<div class = 'red-box'>Added with before()</div>");
-  $(".green-box").before("<div class = 'green-box'>Added with before()</div>");
 
+  // $(".red-box").after("<div class = 'red-box'>Added with after()</div>");
+  // $(".red-box").before("<div class = 'red-box'>Added with before()</div>");
+  // $(".green-box").before("<div class = 'green-box'>Added with before()</div>");
 
+//------------------------------ Replacing Elements in the DOM -------------------------------//
+
+// replaceWith() will replace the selected element with the element that is provided as the argument. 
+
+$("li").replaceWith("<li>Replaced with replaceWith()</li>");
+$(".red-box, .blue-box").replaceWith("<div class = green-box>Replaced w/ replaceWith()</div>");
 
 });
