@@ -21,9 +21,15 @@ $(function() {
 
 //------------------------------ Replacing Elements in the DOM -------------------------------//
 
-// replaceWith() will replace the selected element with the element that is provided as the argument. 
+// replaceWith() will replace the selected element with the element that is provided as the argument. Like before to switch the syntax use replaceAll(). 
 
-$("li").replaceWith("<li>Replaced with replaceWith()</li>");
-$(".red-box, .blue-box").replaceWith("<div class = green-box>Replaced w/ replaceWith()</div>");
+// $("li").replaceWith("<li>Replaced with replaceWith()</li>");
+// $(".red-box, .blue-box").replaceWith("<div class = green-box>Replaced w/ replaceWith()</div>");
+
+
+//------------------------------ Removing Elements from the DOM -------------------------------//
+
+// remove() removes the selected elements from the DOM. This does not allow for the continuity of data or handlers. detach() does allow elements to be removed from the DOM but then appended back with all the data or handlers reinstated. 
+
 
 });
