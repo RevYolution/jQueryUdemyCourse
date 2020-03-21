@@ -1,5 +1,6 @@
 // $(function(){}) is the shorthand notation for jQuery(function(){}) they work the same but industry convention is to use $. 
-
+// delay() is a function that can be used to delay any animation by the milliseconds given in the parameters. It is also possible to use a callback function to time the execution of animations. 
+    // Callback ex: $("p").fadeTo(1000, 0, function(){$("div").slideToggle()});
 // ---------------------------------Showing and hiding elements example--------------------------------------//
 
 // $(function() {
