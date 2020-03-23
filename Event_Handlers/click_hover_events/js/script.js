@@ -32,4 +32,18 @@ $(function() {
   $("h1").hover(function(){$(this).css("color", "orange");}, 
   function(){$(this).css("color", "black");
   });
+
+  // The on() function allows to add multiple handlers to a single element. 
+  $("h2").on({
+      mouseenter: function() {
+        $(this).css("color", "red");
+      },
+      mouseleave: function(){
+        $(this).css("color", "black");
+      },
+      click: function(){
+        $(this).fadeTo(1000, 0);
+        console.log("Click hit");
+      }
+  });
 });
