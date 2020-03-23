@@ -42,7 +42,9 @@ $(function() {
         $(this).css("color", "black");
       },
       click: function(){
-        $(this).fadeTo(1000, 0);
+        $(this).fadeOut(function(){
+          $(this).text("Changed with click()/fadeTo() jQuery").fadeIn();
+        });
         console.log("Click hit");
       }
   });
