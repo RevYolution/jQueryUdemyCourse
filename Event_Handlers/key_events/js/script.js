@@ -45,4 +45,25 @@ $(function() {
       $(this).css("box-shadow", "0 0 4px #181");
     }
   })
+
+  // In a similar vein as above the change() function handles any change that occurs on the page such as radio selection or a drop down option being selected. 
+
+  // Here we are watching for a change on the checkbox and once there is one the box shadow will change. 
+  $("#checkbox").change(function(){
+    var isChecked = $(this).is(":checked");
+    if(isChecked){
+      $(this).add("label[for='cb']").css("box-shadow", "0 0 4px #181");
+    } else {
+      $(this).add("labe[for='cb']").css("box-shadow", "0 0 4px #811");
+    }
+  });
+
+  // We can also watch for changes on drop downs as shown below.
+
+  $("#selection").change(function(){
+    //On a change we are storing the text of the option that is selected.  
+    var selectedOption = $(this).find(":selected").text();
+    //Sends and alert of what option was chosen. 
+    alert(selectedOption);
+  });
 });
