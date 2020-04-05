@@ -4,7 +4,9 @@
 //   // a Pokédex.
 
 //   var pokeapi = "https://pokeapi.co/api/v2/generation/1";
+//    //  getJSON(url, [data], [success]) is the method signature for getJSON(). url is a string that contains the URL which the request is sent. data is either a plain object or string that is sent to the server with the request. success is a callback function that is executed once the request is successful. 
 
+//    // .done() is a a function that is called on a Deferred function is successfully resolved. Here once the getJSON() is resolved by grabbing a JSON object from the pokeon api the done function is called. What this does is goes through the object and creates new p elements with what is gotten.  
 //   $.getJSON(pokeapi).done(function(data) {
 //     console.log(data);  // Explore available data in the Developer Tools Console
 //     $.each(data.pokemon_species, function(index, pokemon) {
@@ -12,9 +14,11 @@
 //       var paragraph = $("<p>").html("Pokémon species no. " + (index+1) + " is " + name);
 //       paragraph.appendTo("#pokedex");
 //     });
+//    // .fail() is a method that is called on a Deferred function is failed. 
 //   }).fail(function() {
 //     // Handle error case
 //     console.log("Call to PokéAPI failed.");
+//    // .always() is a function that is always called on a Deferred function regardless if it is successful or rejected. 
 //   }).always(function() {
 //     // Will always be executed (in either case).
 //     console.log("Pokémon is awesome.")
