@@ -9,6 +9,8 @@
 //    // .done() is a a function that is called on a Deferred function is successfully resolved. Here once the getJSON() is resolved by grabbing a JSON object from the pokeon api the done function is called. What this does is goes through the object and creates new p elements with what is gotten.  
 //   $.getJSON(pokeapi).done(function(data) {
 //     console.log(data);  // Explore available data in the Developer Tools Console
+//    // .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element.
+//    // Here the each() function is looping over the data that is received from the poekmon api. It then creates a paragraph with the index it is at with the Pokemon name capitalized. It then appends it to the DOM within the div with an id of pokedex.  
 //     $.each(data.pokemon_species, function(index, pokemon) {
 //       var name = capitalize(pokemon.name);
 //       var paragraph = $("<p>").html("Pokémon species no. " + (index+1) + " is " + name);
