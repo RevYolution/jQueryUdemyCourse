@@ -44,7 +44,7 @@ $(function () {
           .attr("id", pokemon.name)
           .attr("href", "#")
           .append(boldName);
-
+//TODO: Figure out how these are getting pulled to number. 
       var paragraph = $("<p>")
           .html("Pokémon species no. " + (index+1) + " is ")
           .append(link);
